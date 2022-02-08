@@ -1,0 +1,90 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb (204, 204, 255);
+  }
+  
+  * {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(240,248,255);
+  }
+
+  #inputRows{
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      
+  }
+
+  #inputCols{
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+  }
+
+  button{
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px ;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  
+  }
+  
+  #top > div {
+    display: flex;
+    flex-basis: 6vh;
+    width: 100vw;
+    margin: 2vh;
+    justify-content: center;
+  }
+  
+  #top > div > div {
+    margin: 0px 2vh;
+  }
+  
+  #results span {
+    font-weight: bolder;
+  }
+  
+  #grid {
+    margin: 2vh;
+    padding: 1vh;
+    flex-grow: 1;
+    display: grid;
+    gap: 1vh;
+  
+    font-size: 3vh;
+  
+    border: 1px solid rgb(128, 128, 161);
+  
+    font-family: 'Josefin Sans ', sans-serif;
+    border-radius: 10px;
+  
+  }
+  
+  #grid > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: 	rgb(230,230,250);
+    border-radius: 10px;
+  }
+  
+  #grid > div.selected {
+    background-color:  rgb(204, 204, 255);
+    color: rgb(75,0,130);
+  }
+  
+  #grid > div:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(147,112,219);
+  }
