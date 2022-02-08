@@ -51,6 +51,8 @@ function getArrayOfSelectedNumbers(className) {
 
 };
 
+
+
 function gridMaker(gridContainer, R, C) {
 
     gridContainer.style.display = "grid";
@@ -72,6 +74,14 @@ function gridMaker(gridContainer, R, C) {
 }
 
 
+function roundString(numberWithManyDecimals, decimals) {
+    // From: https://stackoverflow.com/a/12698296/2027283
+    var rounded = Math.pow(10, decimals);
+    return (Math.round(numberWithManyDecimals * rounded) / rounded).toFixed(decimals);
+}
+
+
+
 function updateResults(className) {
 
 
@@ -90,16 +100,6 @@ function updateResults(className) {
     document.querySelector("#average span").innerHTML = average;
 
 }
-
-
-function roundString(numberWithManyDecimals, decimals) {
-    // From: https://stackoverflow.com/a/12698296/2027283
-    var rounded = Math.pow(10, decimals);
-    return (Math.round(numberWithManyDecimals * rounded) / rounded).toFixed(decimals);
-}
-
-
-
 
 // EVENTLISTENERS FOR EXISTING HTML-ELEMENTS
 
@@ -130,7 +130,6 @@ document.onload = gridMaker(document.querySelector("#grid"),
 window.onload = gridMaker(document.querySelector("#grid"),
     document.querySelector("#inputRows").value,
     document.querySelector("#inputCols").value);
-
 
 // DIRECT CODE
 // Initialise the page directly, no need to wait for user to click first time.
